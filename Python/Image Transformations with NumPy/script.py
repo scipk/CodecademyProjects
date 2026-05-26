@@ -38,12 +38,3 @@ show_image(x, "x")
 
 solved_heart_img = np.matmul(random_img, x)
 show_image(solved_heart_img, "Solved Heart Image")
-
-inappropriate = np.array([[255,255,0,255/2,0,255,255],
-              [255,255,0,0,0,255,255],
-              [255,255,0,255/2,0,255,255],
-              [255,255,0,255/2,0,255,255],
-              [255,0,255/2,255/2,255/2,0,255],
-              [0,255/2,0,0,0,255/2,0],
-              [255,0,255,255,255,0,255]])
-show_image(inappropriate, "Inappropriate")
