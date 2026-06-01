@@ -1,0 +1,4 @@
+# Custom Robotics Toolkit with Templates
+You’ve been hired to create a "Custom Toolkit" for a robotics lab! This toolkit will handle data of different types (like integers, doubles, and strings) without needing repetitive code. To accomplish this, you’ll use **C++ templates** to make functions and classes more flexible and reusable.
+
+You’ll start by crafting function templates to compare and manipulate data, followed by designing a generic class to store and retrieve values of any type. Along the way, you’ll customize your templates to handle special cases (like strings) and even create a function that can process multiple inputs at once. By the end, you’ll combine all these tools into a cohesive demo, showcasing the power and simplicity of templates in action. Get ready to build something awesome!
