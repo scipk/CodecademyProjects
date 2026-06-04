@@ -1,0 +1,3 @@
+2#Test Restaurant #Test Cuisine #1#Burger  - $9.99
+1#Jamal's Chicken#Jamaican#2#Jerk chicken - $20.00#Beef Patty - $10.00
+2#Luau Hawaii#Hawaiian#1#Chicken Katsu - $10.00
