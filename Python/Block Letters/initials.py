@@ -1,24 +1,24 @@
 # Parham Khodadi
-# I'm an Aerospace Engineering student with a minor in Physics
+# I am a M.S. Aerospace Engineering student at UCLA and I am interested in GNC of aerospace vehicles.
 
-firstInitial = """
-PPPPP
+first_initial = """
+PPPP 
 P   P
 P   P
-PPPPP
+PPPP 
 P
 P
 P
 """
 
-secondInitial = """
-K  K 
-K K 
-KK 
+last_initial = """
+K   K
+K  K
+K K
+KK
 K K
 K  K
 K   K
-K    K
- """
+"""
 
-print(firstInitial + secondInitial)
+print(first_initial + last_initial)

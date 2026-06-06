@@ -1,7 +1,7 @@
 # Magic 8-Ball
-The Magic 8-Ball is a popular toy developed in the 1950s for fortune-telling or advice seeking.
+The [Magic 8-Ball](https://en.wikipedia.org/wiki/Magic_8-Ball) is a popular toy developed in the 1950s for fortune-telling or advice seeking.
 
-Write a magic8.py Python program that can answer any “Yes” or “No” question with a different fortune each time it executes.
+Write a **magic8.py** Python program that can answer any “Yes” or “No” question with a different fortune each time it executes.
 
 ![MAGIC 8 BALL](https://content.codecademy.com/courses/learn-cpp/conditionals-and-logic/magic8ball.gif)
 

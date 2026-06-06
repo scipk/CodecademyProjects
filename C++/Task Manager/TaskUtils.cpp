@@ -2,9 +2,8 @@
 
 std::vector<Task> TaskUtils::filter(const std::vector<Task>& tasks, const std::function<bool(const Task&)>& predicate) {
   std::vector<Task> result;
-  for (auto task : tasks) {
-    bool keep = predicate(task);
-    if (keep) result.push_back(task);
+  for (const auto& task : tasks) {
+    if (predicate(task)) result.push_back(task);
   }
   return result;
 }

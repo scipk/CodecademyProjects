@@ -1,33 +1,76 @@
-weight = 5
-cost = 0.0
-cost_drone = 0.0;
+# Sal's Shipping
+import sys
 
-# Ground Shipping
-if (weight <= 2):
-  cost = (1.50 * weight) + 20.00
-elif (weight <= 6):
-  cost = (3.00 * weight) + 20.00
-elif (weight <= 10):
-  cost =  (4.00 * weight) + 20.00
+print("------------------------------")
+print("Welcome to Sal's Shipping!")
+print("------------------------------\n")
+
+print("We offer three types of shipping: Ground, Ground Premium, and Drone.")
+print("G - Ground Shipping")
+print("P - Ground Premium Shipping")
+print("D - Drone Shipping")
+
+shipping_type = input("What type of shipping would you like? (G/P/D): ")
+
+weight = float(input("What is the weight of your package?: "))
+
+
+if shipping_type == "P":
+    shipping_type = "Ground Premium Shipping"
+    cost = 125
+elif shipping_type == "G":
+    shipping_type = "Ground Shipping"
+    
+    if weight <= 2.0:
+        cost = 20 + weight * 1.50
+    elif weight > 2.0 and weight <= 6.0:
+        cost = 20 + weight * 3.00
+    elif weight > 6.0 and weight <= 10.0:
+        cost = 20 + weight * 4.00
+    else:
+        cost = 20 + weight * 4.75
+elif shipping_type == "D":
+    shipping_type = "Drone Shipping"
+    if weight <= 2.0:
+        cost = weight * 4.50
+    elif weight > 2.0 and weight <= 6.0:
+        cost = weight * 9.00
+    elif weight > 6.0 and weight <= 10.0:
+        cost = weight * 12.00
+    else:
+        cost = weight * 14.25
 else:
-  cost = (4.75 * weight) + 20.00
+    sys.exit("Invalid shipping type. Please choose G, P, or D.")
 
-cost_premium = 125.00
+print("------------------------------")
 
-print("Cost: ")
-print(cost)
-print("Premium Cost: ")
-print(cost_premium)
+print("Your shipping cost is: $", format(cost, ",.2f"), sep="")
+print("Your shipping type is:", shipping_type)
 
-# Drone Shipping
-if (weight <= 2):
-  cost_drone = (4.50 * weight)
-elif (weight <= 6):
-  cost_drone = (9.00 * weight)
-elif (weight <= 10):
-  cost_drone = (12.00 * weight)
-else:
-  cost_drone = (14.75 * weight)
+compare_cost = input("\nWould you like to compare the cost of the other shipping options? (Y/N): ")
+if compare_cost == "Y":
+    print("------------------------------")
+    print("Ground Premium Shipping Price is: $125.00")
 
-print("Drone Cost: ")
-print(cost_drone)
+    if weight <= 2.0:
+        cost = 20 + weight * 1.50
+    elif weight > 2.0 and weight <= 6.0:
+        cost = 20 + weight * 3.00
+    elif weight > 6.0 and weight <= 10.0:
+        cost = 20 + weight * 4.00
+    else:
+        cost = 20 + weight * 4.75
+    print("Ground Shipping Price is: $", format(cost, ",.2f"), sep="")
+
+    if weight <= 2.0:
+        cost = weight * 4.50
+    elif weight > 2.0 and weight <= 6.0:
+        cost = weight * 9.00
+    elif weight > 6.0 and weight <= 10.0:
+        cost = weight * 12.00
+    else:
+        cost = weight * 14.25
+    print("Drone Shipping Price is: $", format(cost, ",.2f"), sep="")
+
+print("------------------------------")
+print("Thank you for choosing Sal's Shipping!")
